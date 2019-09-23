@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@color/colorPrimary" />
+
+    <LinearLayout
+        android:id="@+id/core_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/container_with_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginVertical="80dp">
+
+            <LinearLayout
+                android:id="@+id/container_back_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back"
+                    android:background="@drawable/button_yellow_press_white"
+                    android:textColor="@color/yellow"
+                    android:textSize="20sp"
+                    android:textAllCaps="false"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp">
+
+                    <Button
+                        android:id="@+id/button_choose_CUBA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/CUBA"
+                        android:textSize="20sp"
+                        android:textColor="@color/yellow"
+                        android:padding="10dp"
+                        android:background="@drawable/button_yellow_press_white"/>
+                    <Button
+                        android:id="@+id/button_choose_CUBA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Бы ли бы мы здесь одни"
+                        android:textSize="20sp"
+                        android:textColor="@color/yellow"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_yellow_press_white"/>
+                    <Button
+                        android:id="@+id/button_choose_CUBA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Кто мы то?"
+                        android:textSize="20sp"
+                        android:textColor="@color/yellow"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_yellow_press_white"/>
+                    <Button
+                        android:id="@+id/button_choose_CUBA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Я здесь один"
+                        android:textSize="20sp"
+                        android:textColor="@color/yellow"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_yellow_press_white"/>
+                    <Button
+                        android:id="@+id/button_choose_CUBA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/CUBA"
+                        android:textSize="20sp"
+                        android:textColor="@color/yellow"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_yellow_press_white"/>
+                    <Button
+                        android:id="@+id/button_choose_CUBA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/CUBA"
+                        android:textSize="20sp"
+                        android:textColor="@color/yellow"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_yellow_press_white"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

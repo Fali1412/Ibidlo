@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IБЫ(д)ЛО</string>
+    <string name="HelloB">Добро пожаловать, Быдло</string>
+    <string name="launch_button">Начать путь Быдла</string>
+    <string name="back">Назад</string>
+    <string name="level">Уровень: </string>
+    <string name="CUBA">КУБА</string>
+    <string name="text_for_faq">Тут описание "правил" игры</string>
+</resources>
