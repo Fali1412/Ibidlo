@@ -24,7 +24,7 @@
             android:orientation="vertical"
             android:gravity="center"
             android:padding="10dp"
-            android:layout_marginVertical="80dp">
+            android:layout_marginVertical="40dp">
 
             <LinearLayout
                 android:id="@+id/container_back_button"
@@ -48,7 +48,8 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -58,55 +59,6 @@
                     android:layout_marginTop="10dp"
                     android:padding="10dp">
 
-                    <Button
-                        android:id="@+id/button_choose_CUBA"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/CUBA"
-                        android:textSize="20sp"
-                        android:textColor="@color/yellow"
-                        android:padding="10dp"
-                        android:background="@drawable/button_yellow_press_white"/>
-                    <Button
-                        android:id="@+id/button_choose_CUBA"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Бы ли бы мы здесь одни"
-                        android:textSize="20sp"
-                        android:textColor="@color/yellow"
-                        android:padding="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/button_yellow_press_white"/>
-                    <Button
-                        android:id="@+id/button_choose_CUBA"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Кто мы то?"
-                        android:textSize="20sp"
-                        android:textColor="@color/yellow"
-                        android:padding="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/button_yellow_press_white"/>
-                    <Button
-                        android:id="@+id/button_choose_CUBA"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Я здесь один"
-                        android:textSize="20sp"
-                        android:textColor="@color/yellow"
-                        android:padding="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/button_yellow_press_white"/>
-                    <Button
-                        android:id="@+id/button_choose_CUBA"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/CUBA"
-                        android:textSize="20sp"
-                        android:textColor="@color/yellow"
-                        android:padding="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/button_yellow_press_white"/>
                     <Button
                         android:id="@+id/button_choose_CUBA"
                         android:layout_width="match_parent"

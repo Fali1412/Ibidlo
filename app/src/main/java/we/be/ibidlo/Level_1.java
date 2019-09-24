@@ -37,14 +37,6 @@ public class Level_1 extends AppCompatActivity {
             }
         });
 
-        final ImageView right_clik = (ImageView) findViewById(R.id.image_right);
-        right_clik.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
         Window wes = getWindow();
         wes.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
     }
@@ -64,4 +56,3 @@ public class Level_1 extends AppCompatActivity {
 
     }
 }
-
