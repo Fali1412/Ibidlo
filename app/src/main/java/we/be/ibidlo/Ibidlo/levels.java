@@ -1,4 +1,4 @@
-package we.be.ibidlo;
+package we.be.ibidlo.Ibidlo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import we.be.ibidlo.MainActivity;
+import we.be.ibidlo.R;
 
 public class levels extends AppCompatActivity {
 
@@ -40,7 +42,10 @@ public class levels extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     Intent act = new Intent(levels.this, MainActivity.class);
-                    startActivity(act); finish();
+                    CountLevel zerolevel = new CountLevel();
+                    zerolevel.countlevelPlus(); //Cаня, отпути
+                    startActivity(act);
+                    finish();
                 }
                 catch (Exception e){
 

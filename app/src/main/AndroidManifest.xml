@@ -25,14 +25,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".levels"
+            android:name=".Ibidlo.levels"
             android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Level_1"
+            android:name=".Ibidlo.Level_1"
             android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
