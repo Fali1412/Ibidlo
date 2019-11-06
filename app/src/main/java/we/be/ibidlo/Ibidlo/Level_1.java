@@ -3,14 +3,12 @@ package we.be.ibidlo.Ibidlo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -21,7 +19,7 @@ public class Level_1 extends AppCompatActivity {
 
     private ImageView img_right;
     private ImageView img_left;
-    private int[] bankCountImages = { 1, 2};
+    private int[] bankCountImages = {0};
     private int voult = 0;
 
 
@@ -70,6 +68,7 @@ public class Level_1 extends AppCompatActivity {
         }
     }
 
+    //"Слушатели" для левого и правого ImageView
     private void gameChose(){
         img_left.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,30 +78,51 @@ public class Level_1 extends AppCompatActivity {
         });
         img_right.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                comparisonCountImages(img_right);
+            public void onClick(View view) { comparisonCountImages(img_right);
             }
         });
     }
 
+    //Сравнение последних "значений" картинок, которые записаны в массив bankCountImages
     private void comparisonCountImages(ImageView imagep){
-//        if(
-//
-//        )
-//        else()
+        if(imagep == img_left && bankCountImages[bankCountImages.length-1] < bankCountImages[bankCountImages.length-2]){
+            System.out.println("Сработал левый вариант");
+            Intent act = new Intent(Level_1.this, Level_1.class);
+            startActivity(act);
+            finish();
+        }
+        else if(imagep == img_right && bankCountImages[bankCountImages.length-1] > bankCountImages[bankCountImages.length-2]){
+            System.out.println("Сработал правый вариант");
+            Intent act = new Intent(Level_1.this, Level_1.class);
+            startActivity(act);
+            finish();
+        }
+        else{
+            onBackPressed();
+        }
     }
 
+    //Функция генерации случайного числа, добавления его в массив bankCountImages
     private int countImage(){
         Random number = new Random();
         int returnNumber = number.nextInt(11);
         if (returnNumber == voult){
             returnNumber = number.nextInt(11);
-            voult = returnNumber;
         }
+        voult = returnNumber;
+        System.out.println("Добавлено число в массив - "+returnNumber);
         bankCountImages = add(bankCountImages, returnNumber);
         return returnNumber;
     }
 
+    //Код со StacOverFlow, который я позаимствовал
+    private static int[] add(int[] a, int e) {
+        a  = Arrays.copyOf(a, a.length + 1);
+        a[a.length - 1] = e;
+        return a;
+    }
+
+    //Присваивание ImageView картинок
     private void randomImage() {
         int first = countImage();
         int second = countImage();
@@ -111,12 +131,7 @@ public class Level_1 extends AppCompatActivity {
         chose_level(img_right, second);
     }
 
-    private static int[] add(int[] a, int e) {
-        a  = Arrays.copyOf(a, a.length + 1);
-        a[a.length - 1] = e;
-        return a;
-    }
-
+    //Выбор картинки для ImageView
     private void chose_level(ImageView chosenImageView, int levelImageView) {
         switch (levelImageView) {
             case 0:
