@@ -25,6 +25,8 @@ public class levels extends AppCompatActivity {
             public void onClick(View view) {
                 try{
                     Intent chose_level = new Intent(levels.this, Level_1.class);
+                    CountLevel setzerolevel = new CountLevel();
+                    setzerolevel.zerotwo(); //Саня!
                     startActivity(chose_level); finish();
                 }
                 catch (Exception e){
