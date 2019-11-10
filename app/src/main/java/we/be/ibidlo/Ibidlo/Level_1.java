@@ -9,6 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -16,7 +17,7 @@ import java.util.Random;
 import we.be.ibidlo.R;
 
 public class Level_1 extends AppCompatActivity {
-    CountLevel switchlevel = new CountLevel(); //Не забыть про тебя
+    private TextView countlevelinprogressbar;
     private ImageView img_right;
     private ImageView img_left;
     private int[] bankCountImages = {0};
@@ -28,7 +29,7 @@ public class Level_1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_universal);
 
-        changeprogressbarlevel(switchlevel.getCountlevel());
+        changeprogressbarlevel(CountLevel.getCountlevel());
 
         img_right = (ImageView) findViewById(R.id.image_right);
         img_left = (ImageView) findViewById(R.id.image_left);
@@ -86,8 +87,8 @@ public class Level_1 extends AppCompatActivity {
     //Сравнение последних "значений" картинок, которые записаны в массив bankCountImages
     private void comparisonCountImages(ImageView imagep){
         if(imagep == img_left && bankCountImages[bankCountImages.length-1] < bankCountImages[bankCountImages.length-2]){
-            switchlevel.countlevelPlus();
-            if (switchlevel.getCountlevel() == 30){
+            CountLevel.countlevelPlus();
+            if (CountLevel.getCountlevel() == 30){
                 onBackPressed();
             }
             System.out.println("Сработал левый вариант");
@@ -96,8 +97,8 @@ public class Level_1 extends AppCompatActivity {
             finish();
         }
         else if(imagep == img_right && bankCountImages[bankCountImages.length-1] > bankCountImages[bankCountImages.length-2]){
-            switchlevel.countlevelPlus();
-            if (switchlevel.getCountlevel() == 30){
+            CountLevel.countlevelPlus();
+            if (CountLevel.getCountlevel() == 30){
                 onBackPressed();
             }
             System.out.println("Сработал правый вариант");
@@ -177,97 +178,129 @@ public class Level_1 extends AppCompatActivity {
                 break;
         }
     }
+
+    //это нужно будет укоротить
     private void changeprogressbarlevel(int level){
         switch (level){
             case 1:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_1);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 2:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_2);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 3:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_3);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 4:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_4);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 5:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_5);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 6:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_6);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 7:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_7);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 8:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_8);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 9:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_9);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 10:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_10);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 11:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_11);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 12:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_12);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 13:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_13);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 14:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_14);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 15:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_15);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 16:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_16);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 17:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_17);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 18:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_18);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 19:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_19);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 20:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_20);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 21:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_21);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 22:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_22);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 23:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_23);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 24:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_24);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 25:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_25);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 26:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_26);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 27:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_27);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 28:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_28);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 29:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_29);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
             case 30:
-
+                countlevelinprogressbar = (TextView)findViewById(R.id.point_30);
+                countlevelinprogressbar.setBackgroundResource(R.drawable.progress_point_yellow);
                 break;
         }
     }

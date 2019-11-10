@@ -44,8 +44,6 @@ public class levels extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     Intent act = new Intent(levels.this, MainActivity.class);
-                    CountLevel zerolevel = new CountLevel();
-                    zerolevel.countlevelPlus(); //Cаня, отпути
                     startActivity(act);
                     finish();
                 }

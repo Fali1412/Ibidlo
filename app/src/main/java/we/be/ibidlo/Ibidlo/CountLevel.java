@@ -1,19 +1,20 @@
 package we.be.ibidlo.Ibidlo;
 
 public class CountLevel {
-    private int countlevel = 0;
+    private static int countlevel;
 
-    public void zerotwo(){  //Это всё Саня
+    public static void zerotwo(){  //Это всё Саня
         System.out.println("Число уровней сброшено");
         countlevel = 0;
     }
 
-    public int getCountlevel(){
+    public static int getCountlevel(){
         return countlevel;
     }
 
-    public void countlevelPlus(){
-        System.out.println("Число уровней"+countlevel);
+    public static void countlevelPlus(){
+        System.out.println("Число уровней до добавления"+countlevel);
         countlevel++;
+        System.out.println("Число уровней после добавления"+countlevel);
     }
 }
