@@ -1,4 +1,4 @@
-package we.be.ibidlo.Ibidlo;
+package we.be.ibidlo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import we.be.ibidlo.MainActivity;
-import we.be.ibidlo.R;
+import we.be.ibidlo.Ibidlo.CountLevel;
+import we.be.ibidlo.Ibidlo.Level_1;
 
 public class levels extends AppCompatActivity {
 

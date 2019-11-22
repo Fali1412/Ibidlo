@@ -10,11 +10,13 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.Random;
 
 import we.be.ibidlo.R;
+import we.be.ibidlo.levels;
 
 public class Level_1 extends AppCompatActivity {
     private TextView countlevelinprogressbar;
@@ -107,6 +109,9 @@ public class Level_1 extends AppCompatActivity {
             finish();
         }
         else{
+            Toast gag;
+            gag = Toast.makeText(getBaseContext(), "You lose", Toast.LENGTH_SHORT);
+            gag.show();
             onBackPressed();
         }
     }
